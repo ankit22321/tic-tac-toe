@@ -1,0 +1,122 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+.body{
+    margin:0;
+    background-color: lightgoldenrodyellow;
+}
+.heading{
+    margin-top: 50px;
+    text-align: center;
+    color: maroon;
+}
+.modal-title{
+    color: goldenrod;
+}
+#restart{
+    align-self: center;
+}
+.winMessage{
+    color: green;
+    font-size: 30px;
+    text-align: center;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: thistle;
+    padding-right: 10px;
+    color: white;
+    text-align: right;
+ }
+
+.board{
+    width: 99vw;
+    height: 70vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3,auto);
+}
+
+.cell{
+    width: 150px;
+    height: 150px;
+    background-color: lightgrey;
+    border: 1px solid black;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3){
+    border-top: 0;
+}
+.cell:nth-child(3n+1){
+    border-left: 0;
+}
+.cell:nth-child(3n+3){
+    border-right: 0;
+}
+.cell:last-child,
+.cell:nth-child(7),
+.cell:nth-child(8){
+    border-bottom: 0;
+}
+
+.cell.x::before,
+.cell.x::after,
+.board.x .cell:not(.x):not(.o):hover::before,
+.board.x .cell:not(.x):not(.o):hover::after{
+    content: '';
+    position: absolute;
+    width: 10%;
+    height: 90%;
+    background-color: lightcoral;
+}
+.cell.x::before,
+.board.x .cell:not(.x):not(.o):hover::before{
+    transform: rotate(45deg);
+}
+.cell.x::after,
+.board.x .cell:not(.x):not(.o):hover::after{
+    transform: rotate(-45deg);
+}
+
+.cell.o::before,
+.cell.o::after,
+.board.o .cell:not(.x):not(.o):hover::before,
+.board.o .cell:not(.x):not(.o):hover::after{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background-color: slateblue;
+}
+.cell.o::before,
+.board.o .cell:not(.x):not(.o):hover::before{
+    width: 85%;
+    height: 85%;
+}
+.cell.o::after,
+.board.o .cell:not(.x):not(.o):hover::after{
+    width: 65%;
+    height: 65%;
+    background-color: lightgray;
+}
+.cell.x,.cell.o{
+    cursor: not-allowed;
+}
+
+.board .cell:not(.x):not(.o):hover::before,
+.board .cell:not(.x):not(.o):hover::after{
+    opacity: 0.3;
+}

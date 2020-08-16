@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>TicTakToe</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    
+    <script src='jquery.js'></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src='main.js'></script>
+</head>
+
+
+
+<body class="body">
+    
+    <h1 class="heading">Tic Tac Toe</h1>
+    <div class="board">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+    <center><button id="restart" type="button" class="btn btn-primary restart" data-dismiss="modal">Restart</button></center>
+
+  <div class="modal" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+          <p class="winMessage"></p>
+        </div>
+        <div class="modal-footer">
+          <button  type="button" class="btn btn-primary restart" data-dismiss="modal">Restart</button>
+          <button type="button" class="btn btn-default closeModal" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Created By: Ankit Gupta</p>
+  </div>
+
+</body>
+</html>
